@@ -4,7 +4,7 @@
     "type": "symfony-bundle",
     "require": {
         "php": "^7.3|^8.0",
-        "jms/serializer": "3.20",
+        "jms/serializer": "^3.32",
         "doctrine/orm": "2.20",
         "doctrine/persistence": "3.0"
     },
