@@ -4,9 +4,10 @@
     "type": "symfony-bundle",
     "require": {
         "php": "^7.3|^8.0",
-        "jms/serializer": "^1.13|^2.0|^3.0",
-        "doctrine/orm": "^2.7",
-        "doctrine/annotations": "^1.10"
+        "jms/serializer": "^3.32",
+        "doctrine/orm": "^3.3",
+        "doctrine/persistence": "^3.4",
+        "doctrine/dbal": "^4.2"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^5.1",

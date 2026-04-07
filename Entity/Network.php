@@ -6,28 +6,20 @@ use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Remotelabz\NetworkBundle\Exception\BadNetmaskException;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\NetworkRepository")
- */
+#[ORM\Entity(repositoryClass: "App\Repository\NetworkRepository")]
 class Network
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: "integer")]
     private $id;
 
-    /**
-     * @ORM\Embedded(class="IP")
-     * @Serializer\Groups({"lab", "start_lab", "stop_lab"})
-     */
+    #[ORM\Embedded(class: IP::class)]
+    #[Serializer\Groups(["lab", "start_lab", "stop_lab"])]
     private $ip;
 
-    /**
-     * @ORM\Embedded(class="IP")
-     * @Serializer\Groups({"lab", "start_lab", "stop_lab"})
-     */
+    #[ORM\Embedded(class: IP::class)]
+    #[Serializer\Groups(["lab", "start_lab", "stop_lab"])]
     private $netmask;
 
     public function __construct(string $ip, string $netmask)

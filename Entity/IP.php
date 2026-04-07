@@ -5,22 +5,17 @@ namespace Remotelabz\NetworkBundle\Entity;
 use InvalidArgumentException;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Embeddable
- */
+#[ORM\Embeddable]
 class IP
 {
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: "string", length: 255)]
     private $addr;
 
-    /**
-     * Long representation of addr (for database index purposes)
-     *
-     * @ORM\Column(name="_long", type="bigint")
-     */
+
+    // Long representation of addr (for database index purposes)
+    #[ORM\Column(name: "_long", type: "bigint")]
     private $long;
+
 
     public function __construct(string $addr)
     {
